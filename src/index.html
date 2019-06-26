@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html ng-app='app'>
+<header>
+    <style>
+        .jumbotron {
+            width: 1000px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css"
+          integrity="sha256-Nfu23DiRqsrx/6B6vsI0T9vEVKq1M6KgO8+TV363g3s=" crossorigin="anonymous"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+</header>
+<body ng-controller='AppController as vm'>
+<div class="jumbotron text-center">
+
+    <input type="text" name="cep" ng-model="cep">
+    <button class="btn btn-primary" ng-click="vm.checkCep(cep)">Check!</button>
+
+    <table class="table">
+        <tr>
+            <tr>
+                <td>
+
+                </td>
+            </tr>
+        <tr>
+            <td>
+
+            </td>
+        </tr>
+
+        </tr>
+        <tr>
+            <tr>
+        <td>{{vm.cepData.cep}}</td>
+            </tr>
+            <tr>
+                <td>{{vm.cepData.logradouro}}</td>
+            </tr>
+            <tr>
+                <td>{{vm.cepData.complemento}}</td>
+            </tr>
+            <tr>
+                <td>{{vm.cepData.bairro}}</td>
+            </tr>
+            <tr>
+                <td>{{vm.cepData.localidade}}</td>
+            </tr>
+            <tr>
+                <td>{{vm.cepData.uf}}</td>
+            </tr>
+            <tr>
+                <td>{{vm.cepData.ibge}}</td>
+            </tr>
+            <tr>
+                <td>{{vm.cepData.gia}}</td>
+            </tr>
+        </tr>
+
+    </table>
+
+
+</div>
+</div>
+<script src="app/app.module.js"></script>
+</body>
+</html>
