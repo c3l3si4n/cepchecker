@@ -1,72 +1,56 @@
 <!DOCTYPE html>
-
 <html ng-app='app'>
 <header>
     <style>
         .jumbotron {
-            width: 1000px;
+            width: 75%;
             text-align: center;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 50px;
+            margin-top: 20px;
+            min-height: 300px;
+            overflow: hidden;
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css"
-          integrity="sha256-Nfu23DiRqsrx/6B6vsI0T9vEVKq1M6KgO8+TV363g3s=" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
 </header>
+
 <body ng-controller='AppController as vm'>
-<div class="jumbotron text-center">
-
-    <input type="text" name="cep" ng-model="cep">
-    <button class="btn btn-primary" ng-click="vm.checkCep(cep)">Check!</button>
-
-    <table class="table">
-        <tr>
-            <tr>
-                <td>
-
-                </td>
-            </tr>
-        <tr>
-            <td>
-
-            </td>
-        </tr>
-
-        </tr>
-        <tr>
-            <tr>
-        <td>{{vm.cepData.cep}}</td>
-            </tr>
-            <tr>
-                <td>{{vm.cepData.logradouro}}</td>
-            </tr>
-            <tr>
-                <td>{{vm.cepData.complemento}}</td>
-            </tr>
-            <tr>
-                <td>{{vm.cepData.bairro}}</td>
-            </tr>
-            <tr>
-                <td>{{vm.cepData.localidade}}</td>
-            </tr>
-            <tr>
-                <td>{{vm.cepData.uf}}</td>
-            </tr>
-            <tr>
-                <td>{{vm.cepData.ibge}}</td>
-            </tr>
-            <tr>
-                <td>{{vm.cepData.gia}}</td>
-            </tr>
-        </tr>
-
-    </table>
-
-
-</div>
-</div>
-<script src="app/app.module.js"></script>
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Consultar um CEP</p>
+            <h6 class="lead">Use esta ferramenta para consultar as informações de um CEP.</p>
+                
+                <input  type="text" class="col-lg-6"name="cep" ng-model="cep" >
+                <button class=" btn btn-primary" ng-click="vm.checkCep(cep)" type="submit">Checar!</button>
+                <table style='margin-top:20px' ng-hide="vm.cepData == null" class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Cep</th>
+                            <th>Endereço</th>
+                            <th>Bairro</th>
+                            <th>Cidade</th>
+                            <th>Complemento</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                        <tr>
+                            <td colspan='1'>{{vm.cepData.cep}}</td>
+                            <td colspan='1'>{{vm.cepData.logradouro}}</td>
+                            <td colspan='1'>{{vm.cepData.bairro}}</td>
+                            <td colspan='1'>{{vm.cepData.localidade}}</td>
+                            <td colspan='1'>{{vm.cepData.complemento}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+    </div>
+    <footer class="page-footer font-small blue pt-4">
+        <div class="footer-copyright text-center py-3">
+                <a href="http://danielsm.me/">Daniel Matsumoto</a> © 2019
+        </div>
+       
+    </footer>
+    <script src="app/app.module.js"></script>
 </body>
+
 </html>
