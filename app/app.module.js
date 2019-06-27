@@ -1,6 +1,6 @@
 (() => {
     'use strict';
-    angular.module('app',[])
+    angular.module('app',['ngRoute','ngAnimate'])
     .controller('AppController',appController)
     .filter('switchCases', function(){
         return function(letters){

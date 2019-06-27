@@ -1,0 +1,19 @@
+.animate-show-hide.ng-hide {
+    opacity: 0;
+}
+.animate-show-hide.ng-hide-add,
+.animate-show-hide.ng-hide-remove {
+    transition: all linear 0.25s;
+}
+.animate-show-hide.ng-view {
+    opacity: 0;
+}
+.animate-show-hide.ng-view-add,
+.animate-show-hide.ng-view-remove {
+    transition: all linear 0.15s;
+}
+.check-element {
+    border: 1px solid black;
+    opacity: 1;
+    padding: 10px;
+}

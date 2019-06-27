@@ -13,17 +13,21 @@
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js"></script>
 </header>
 
-<body ng-controller='AppController as vm'>
-    <div class="jumbotron text-center">
+<body onload="document.body.className += ' loaded';" ng-controller='AppController as vm'>
+    <div class="jumbotron text-center ng-cloak check-element animate-show-hide">
         <h1 class="display-4">Consultar um CEP</p>
             <h6 class="lead">Use esta ferramenta para consultar as informações de um CEP.</p>
                 
                 <input  type="text" class="col-lg-6"name="cep" ng-model="cep" >
                 <button class=" btn btn-primary" ng-click="vm.checkCep(cep)" type="submit">Checar!</button>
-                <table style='margin-top:20px' ng-hide="vm.cepData == null" class="table">
+                <table style='margin-top:20px' ng-hide="vm.cepData == null" class="table check-element animate-show-hide">
                     <thead class="thead-dark">
                         <tr>
                             <th>Cep</th>
