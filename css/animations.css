@@ -29,7 +29,7 @@
 }
 .animate-show-hide.ng-view-add,
 .animate-show-hide.ng-view-remove {
-    transition: all linear 0.15s;
+    transition: all linear 0.55s;
 }
 .check-element {
     border: 1px solid black;

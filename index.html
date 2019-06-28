@@ -2,8 +2,7 @@
 <html ng-app='app'>
 <header>
     <title>Checar CEP Grátis</title>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
 </header>
 
 <body ng-controller='AppController as vm'>
@@ -19,7 +18,7 @@
                     </div>
                 </form>
                 <table style='margin-top:20px' ng-hide="vm.cepData == null"
-                    class="table check-element animate-show-hide">
+                    class="table animate-show-hide">
                     <thead class="thead-dark">
                         <tr>
                             <th>Cep</th>
@@ -31,11 +30,11 @@
                     </thead>
                     <tbody class="tbody">
                         <tr>
-                            <td colspan='1'>{{vm.cepData.cep}}</td>
-                            <td colspan='1'>{{vm.cepData.logradouro}}</td>
-                            <td colspan='1'>{{vm.cepData.bairro}}</td>
-                            <td colspan='1'>{{vm.cepData.localidade}}</td>
-                            <td colspan='1'>{{vm.cepData.complemento}}</td>
+                            <td>{{vm.cepData.cep}}</td>
+                            <td>{{vm.cepData.logradouro}}</td>
+                            <td>{{vm.cepData.bairro}}</td>
+                            <td>{{vm.cepData.localidade}}</td>
+                            <td>{{vm.cepData.complemento}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -46,27 +45,21 @@
         </div>
     </footer>
     <script type="text/javascript">
-        /* First CSS File */
-        var giftofspeed = document.createElement('link');
-        giftofspeed.rel = 'stylesheet';
-        giftofspeed.href = 'https://cdnjs.cloudflare.com/ajax/libs/ng-toast/2.0.0/ngToast.min.css';
-        giftofspeed.type = 'text/css';
-        var godefer = document.getElementsByTagName('link')[0];
-        godefer.parentNode.insertBefore(giftofspeed, godefer);
-        /* Second CSS File */
-        var giftofspeed2 = document.createElement('link');
-        giftofspeed2.rel = 'stylesheet';
-        giftofspeed2.href = 'https://cdnjs.cloudflare.com/ajax/libs/ng-toast/2.0.0/ngToast-animations.min.css';
-        giftofspeed2.type = 'text/css';
-        var godefer2 = document.getElementsByTagName('link')[0];
-        godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
-
-        var giftofspeed3 = document.createElement('link');
-        giftofspeed3.rel = 'stylesheet';
-        giftofspeed3.href = 'css/animations.css';
-        giftofspeed3.type = 'text/css';
-        var godefer3 = document.getElementsByTagName('link')[0];
-        godefer3.parentNode.insertBefore(giftofspeed3, godefer3);
+        var f = document.createElement("link");
+        f.rel = "stylesheet", f.href =
+            "https://cdnjs.cloudflare.com/ajax/libs/ng-toast/2.0.0/ngToast.min.css", f.type = "text/css";
+        var godefer = document.getElementsByTagName("link")[0];
+        godefer.parentNode.insertBefore(f, godefer);
+        var f2 = document.createElement("link");
+        f2.rel = "stylesheet", f2.href =
+            "https://cdnjs.cloudflare.com/ajax/libs/ng-toast/2.0.0/ngToast-animations.min.css", f2.type =
+            "text/css";
+        var godefer2 = document.getElementsByTagName("link")[0];
+        godefer2.parentNode.insertBefore(f2, godefer2);
+        var f3 = document.createElement("link");
+        f3.rel = "stylesheet", f3.href = "css/animations.css", f3.type = "text/css";
+        var godefer3 = document.getElementsByTagName("link")[0];
+        godefer3.parentNode.insertBefore(f3, godefer3);
     </script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-animate.min.js"></script>
