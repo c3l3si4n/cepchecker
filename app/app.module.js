@@ -20,7 +20,7 @@
         ngToastProvider.configure({
             animation: 'fade',
             horizontalPosition: 'center',
-            combineDuplications: true
+            maxNumber: 1
         });
     }]);
     function appController($http,ngToast) {
