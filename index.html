@@ -1,54 +1,38 @@
 <!DOCTYPE html>
 <html ng-app='app'>
 <header>
-    <style>
-        .jumbotron {
-            width: 75%;
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 90px;
-            min-height: 300px;
-            overflow: hidden;
-            
-        }
-        .col-lg-6.ng-invalid.ng-dirty{border: 1px solid red;}
-        .col-lg-6.ng-valid.ng-dirty{border: 1px solid green}
-    </style>
     <title>Checar CEP Grátis</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-toast/2.0.0/ngToast.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-toast/2.0.0/ngToast-animations.min.css" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-animate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-sanitize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-toast/2.0.0/ngToast.min.js"></script>
+
 </header>
 
-<body onload="document.body.className += ' loaded';" ng-controller='AppController as vm'>
+<body ng-controller='AppController as vm'>
     <toast></toast>
-    <div class="jumbotron text-center ng-cloak check-element animate-show-hide">
+    <div class="jumbotron text-center ng-cloak">
         <h1 class="display-4 text-primary">Consultar um CEP</p>
             <h6 class="lead text-muted">Use esta ferramenta para consultar as informações de um CEP.</p>
                 <form>
-                    <div class='form-group' >
-                            <input "type="text" class="col-lg-6"  name="cep" ng-model="cep" maxlength="8" >
-                            <button type="submit" class="btn btn-primary" ng-disabled="cep.length < 5"ng-click="vm.checkCep(cep)" type="submit">Checar!</button>
+                    <div class='form-group'>
+                        <input "type=" text" class="col-lg-6" name="cep" ng-model="cep" maxlength="8">
+                        <button type="submit" class="btn btn-primary" ng-disabled="cep.length < 5"
+                            ng-click="vm.checkCep(cep)" type="submit">Checar!</button>
                     </div>
-                    
+
                 </form>
-                
-                <table style='margin-top:20px' ng-hide="vm.cepData == null" class="table check-element animate-show-hide">
+
+                <table style='margin-top:20px' ng-hide="vm.cepData == null"
+                    class="table check-element animate-show-hide">
                     <thead class="thead-dark">
                         <tr>
                             <th>Cep</th>
                             <th>Endereço</th>
                             <th>Bairro</th>
-                            <th>Cidade</thConsultar um CEP
-                                >
+                            <th>Cidade</thConsultar um CEP>
                             <th>Complemento</th>
                         </tr>
                     </thead>
@@ -65,11 +49,33 @@
     </div>
     <footer class="page-footer font-small blue pt-4">
         <div class="footer-copyright text-center py-3">
-                <a href="http://danielsm.me/">Daniel Matsumoto</a> © 2019
+            <a href="http://danielsm.me/">Daniel Matsumoto</a> © 2019
         </div>
-       
+
     </footer>
-    <script src="app/app.module.js"></script>
+    <script type="text/javascript">
+        /* First CSS File */
+        var giftofspeed = document.createElement('link');
+        giftofspeed.rel = 'stylesheet';
+        giftofspeed.href = 'https://cdnjs.cloudflare.com/ajax/libs/ng-toast/2.0.0/ngToast.min.css';
+        giftofspeed.type = 'text/css';
+        var godefer = document.getElementsByTagName('link')[0];
+        godefer.parentNode.insertBefore(giftofspeed, godefer);
+
+        /* Second CSS File */
+        var giftofspeed2 = document.createElement('link');
+        giftofspeed2.rel = 'stylesheet';
+        giftofspeed2.href = 'https://cdnjs.cloudflare.com/ajax/libs/ng-toast/2.0.0/ngToast-animations.min.css';
+        giftofspeed2.type = 'text/css';
+        var godefer2 = document.getElementsByTagName('link')[0];
+        godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
+    </script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-animate.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-sanitize.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ng-toast/2.0.0/ngToast.min.js"></script>
+    <script defer src="app/app.module.js"></script>
 </body>
 
 </html>
