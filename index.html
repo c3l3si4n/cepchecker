@@ -4,9 +4,6 @@
     <title>Checar CEP Grátis</title>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/animations.css" />
-
-
 </header>
 
 <body ng-controller='AppController as vm'>
@@ -17,12 +14,10 @@
                 <form>
                     <div class='form-group'>
                         <input "type=" text" class="col-lg-6" name="cep" ng-model="cep" maxlength="8">
-                        <button type="submit" class="btn btn-primary" ng-disabled="cep.length < 5"
-                            ng-click="vm.checkCep(cep)" type="submit">Checar!</button>
+                        <button type="submit" class="btn btn-primary" ng-click="vm.checkCep(cep)"
+                            type="submit">Checar!</button>
                     </div>
-
                 </form>
-
                 <table style='margin-top:20px' ng-hide="vm.cepData == null"
                     class="table check-element animate-show-hide">
                     <thead class="thead-dark">
@@ -49,7 +44,6 @@
         <div class="footer-copyright text-center py-3">
             <a href="http://danielsm.me/">Daniel Matsumoto</a> © 2019
         </div>
-
     </footer>
     <script type="text/javascript">
         /* First CSS File */
@@ -59,7 +53,6 @@
         giftofspeed.type = 'text/css';
         var godefer = document.getElementsByTagName('link')[0];
         godefer.parentNode.insertBefore(giftofspeed, godefer);
-
         /* Second CSS File */
         var giftofspeed2 = document.createElement('link');
         giftofspeed2.rel = 'stylesheet';
@@ -67,6 +60,13 @@
         giftofspeed2.type = 'text/css';
         var godefer2 = document.getElementsByTagName('link')[0];
         godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
+
+        var giftofspeed3 = document.createElement('link');
+        giftofspeed3.rel = 'stylesheet';
+        giftofspeed3.href = 'css/animations.css';
+        giftofspeed3.type = 'text/css';
+        var godefer3 = document.getElementsByTagName('link')[0];
+        godefer3.parentNode.insertBefore(giftofspeed3, godefer3);
     </script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-animate.min.js"></script>
