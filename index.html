@@ -1,49 +1,63 @@
 <!DOCTYPE html>
-<html ng-app='app'>
+<html lang='en' ng-app='app'>
 <header>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Checar CEP Grátis</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+    <meta name="Description" content="Consiga todas as informações sobre um determinado CEP de uma maneira grátis. ">
+    <meta name="theme-color" content="#0000FF"/>
+    
+    
 </header>
 
 <body ng-controller='AppController as vm'>
+    
     <toast></toast>
     <div class="jumbotron text-center ng-cloak">
         <h1 class="display-4 text-primary">Consultar um CEP</p>
             <h6 class="lead text-muted">Use esta ferramenta para consultar as informações de um CEP.</p>
                 <form>
                     <div class='form-group'>
-                        <input "type=" text" class="col-lg-6" name="cep" ng-model="cep" maxlength="8">
-                        <button type="submit" class="btn btn-primary" ng-click="vm.checkCep(cep)"
-                            type="submit">Checar!</button>
+                        <label class="text-primary" for="cep">
+                            CEP <input placeholder="Coloque o seu CEP" style="width:60%;" type="text" class="col-lg-6" name="cep" ng-model="cep" maxlength="8">
+
+
+                            <button style:"margin-top:20px" type="submit" class="btn btn-primary"
+                                ng-click="vm.checkCep(cep)" type="submit">Checar!</button>
+                        </label>
+
+
+
                     </div>
                 </form>
-                <table style='margin-top:20px' ng-hide="vm.cepData == null"
-                    class="table animate-show-hide">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>Cep</th>
-                            <th>Endereço</th>
-                            <th>Bairro</th>
-                            <th>Cidade</thConsultar um CEP>
-                            <th>Complemento</th>
-                        </tr>
-                    </thead>
-                    <tbody class="tbody">
-                        <tr>
-                            <td>{{vm.cepData.cep}}</td>
-                            <td>{{vm.cepData.logradouro}}</td>
-                            <td>{{vm.cepData.bairro}}</td>
-                            <td>{{vm.cepData.localidade}}</td>
-                            <td>{{vm.cepData.complemento}}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table style='margin-top:20px' ng-hide="vm.cepData == null" class="table animate-show-hide">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Cep</th>
+                                <th>Endereço</th>
+                                <th>Bairro</th>
+                                <th>Cidade</thConsultar um CEP>
+                                <th>Complemento</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr>
+                                <td>{{vm.cepData.cep}}</td>
+                                <td>{{vm.cepData.logradouro}}</td>
+                                <td>{{vm.cepData.bairro}}</td>
+                                <td>{{vm.cepData.localidade}}</td>
+                                <td>{{vm.cepData.complemento}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
     </div>
     <footer class="page-footer font-small blue pt-4">
         <div class="footer-copyright text-center py-3">
             <a href="http://danielsm.me/">Daniel Matsumoto</a> © 2019
         </div>
     </footer>
+
     <script type="text/javascript">
         var f = document.createElement("link");
         f.rel = "stylesheet", f.href =
@@ -61,6 +75,7 @@
         var godefer3 = document.getElementsByTagName("link")[0];
         godefer3.parentNode.insertBefore(f3, godefer3);
     </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-animate.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-sanitize.min.js"></script>
